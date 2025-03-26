@@ -88,9 +88,16 @@ def parse_program(ast):
     return "\n\n".join(lines)
 
 def main(filepath):
-    with open(filepath, 'r') as f:
-        ast = json.load(f)
+    
+    try:
+        with open(filepath, 'r') as f:
+            ast = json.load(f)
+    except FileNotFoundError:
+        print("Le fichier n'existe pas.")
+    
     js_code = parse_program(ast)
+    
+    
     print(js_code)
 
 if __name__ == '__main__':
