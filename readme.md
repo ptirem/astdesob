@@ -34,6 +34,10 @@ cd ast-to-js-parser
 ```bash
 python ast_parser.py path/to/ast.json > output.js
 ```
+or
+```bash
+python ast_parser.py path/to/ast.json 
+```
 
 2. **JavaScript output is printed directly to the terminal:**
 
